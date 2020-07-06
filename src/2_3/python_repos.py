@@ -7,7 +7,7 @@ r = requests.get(url)
 print(r.status_code)
 response_dict = r.json()
 repo_dicts = response_dict['items']
-
+print(response_dict['total_count'])
 names, stars = [], []
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
@@ -25,6 +25,8 @@ my_config.width = 1000
 chart = pygal.Bar(my_config, style=my_style)
 chart.title = 'Most popular Python Projects on Github'
 chart.x_labels = names
+
+print(names[0])
 
 chart.add('', stars)
 chart.render_to_file('python_repos.svg')
