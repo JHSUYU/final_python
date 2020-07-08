@@ -17,6 +17,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 # 设置字体
 my_font = font_manager.FontProperties(fname="苹方字体.ttf")
+# 以上全是基本配置，新建文件需要复制
 
 # print(dfr.head())
 
