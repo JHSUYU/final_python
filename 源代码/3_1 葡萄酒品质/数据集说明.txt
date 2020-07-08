@@ -1,0 +1,61 @@
+引文要求:
+  该数据集已公开供研究。详细信息在[Cortez等，2009]中进行了描述。
+  如果您打算使用此数据库，请提供以下引用：
+
+  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
+  Modeling wine preferences by data mining from physicochemical properties.
+  In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
+
+  Available at: [@Elsevier] http://dx.doi.org/10.1016/j.dss.2009.05.016
+                [Pre-press (pdf)] http://www3.dsi.uminho.pt/pcortez/winequality09.pdf
+                [bib] http://www3.dsi.uminho.pt/pcortez/dss09.bib
+
+1. 标题: Wine Quality（葡萄酒品质）
+
+2. 来源
+   Created by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009
+   
+3. 过去的用法:
+
+  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
+  Modeling wine preferences by data mining from physicochemical properties.
+  In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
+
+  在上面的参考中，使用红酒和白葡萄酒样本创建了两个数据集。输入内容包括客观测试（例如PH值），输出内容基于感官数据
+  （葡萄酒专家至少进行3次评估的中位数）。每位专家都将葡萄酒的质量评定为0（非常差）至10（非常好）。应用了多种数据挖掘方法，
+  以回归方法对这些数据集进行建模。支持向量机模型取得了最佳效果。计算了几个指标：MAD，固定误差容限的混淆矩阵（T）等。此外，
+  我们绘制了输入变量的相对重要性（通过敏感性分析程序进行了测量）。
+ 
+4. 相关信息:
+   这两个数据集与葡萄牙“ Vinho Verde”葡萄酒的红色和白色变体有关。有关更多详细信息，
+   请访问：http://www.vinhoverde.pt/en/或参考文献[Cortez等，2009]。由于隐私和逻辑问题，只有理化（输入）和
+   感官（输出）变量可用（例如，没有有关葡萄类型，葡萄酒品牌，葡萄酒售价等的数据）。
+
+   这些数据集可以视为分类或回归任务。这些类别是有序的，而且不均衡（例如，普通的葡萄酒要远多于劣质葡萄酒或优质葡萄酒）。
+   离群值检测算法可用于检测少数优质或劣质葡萄酒。另外，我们不确定所有输入变量是否相关。因此，测试特征选择方法可能会很有趣。
+
+5. 实例数量：红酒-1599；白葡萄酒-4898。
+
+6. 属性数量：11个输入属性 + 1个输出属性
+   注意：几个属性可能是相关的，因此应用某种特征选择很有意义。
+
+7. 属性信息：
+   有关更多信息，请阅读[Cortez等，2009]。
+
+   输入变量（基于理化测试）：
+   1 - fixed acidity：固定酸
+   2 - volatile acidity：挥发性酸
+   3 - citric acid：柠檬酸
+   4 - residual sugar：残留糖
+   5 - chlorides：氯化物
+   6 - free sulfur dioxide：游离二氧化硫
+   7 - total sulfur dioxide：二氧化硫总量
+   8 - density：密度
+   9 - pH：酸碱值
+   10 - sulphates：硫酸盐
+   11 - alcohol：酒精
+
+   输出变量（基于感官数据）：
+   12 - quality (介于0到10之间)：品质
+
+8. 缺少属性值：无
