@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -30,4 +30,4 @@ r = dfw.columns.tolist()
 r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
-print(dfr.head())
+# print(dfr.head())
