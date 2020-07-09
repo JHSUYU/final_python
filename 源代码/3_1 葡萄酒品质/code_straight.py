@@ -31,3 +31,38 @@ r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
 # print(dfr.head())
+
+colnm = dfr.columns.tolist()
+plt.figure(figsize = (20, 15))
+plt.suptitle("红葡萄酒单变量直方图\nY轴：频数", y=1.0, fontsize = 16) #总标题
+# 画前三行的图
+for i in range(9):
+    plt.subplot(4,3,i+1)
+    dfr[colnm[i]].hist(bins = 100, color = color[3])
+    plt.xlabel(colnm[i],fontsize = 14)
+plt.tight_layout()
+# 画第四行的图
+for i in range(4):
+    plt.subplot(4,4,i+13)
+    dfr[colnm[i+9]].hist(bins = 100, color = color[3])
+    plt.xlabel(colnm[i+9],fontsize = 14)
+plt.tight_layout()
+plt.show()
+
+#白葡单变量直方图
+colnm = dfw.columns.tolist()
+plt.figure(figsize = (16, 12))
+plt.suptitle('白葡萄酒单变量直方图\nY轴：频数', y=1, fontsize = 16) #总标题
+"""画前三行的图"""
+for i in range(9):
+    plt.subplot(4,3,i+1)
+    dfw[colnm[i]].hist(bins = 100, color = color[4])
+    plt.xlabel(colnm[i],fontsize = 14)
+plt.tight_layout()
+"""画第四行的图"""
+for i in range(4):
+    plt.subplot(4,4,i+13)
+    dfw[colnm[i+9]].hist(bins = 100, color = color[4])
+    plt.xlabel(colnm[i+9],fontsize = 14)
+plt.tight_layout()
+plt.show()
