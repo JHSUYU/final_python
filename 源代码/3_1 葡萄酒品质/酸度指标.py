@@ -33,7 +33,6 @@ r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
 # 固定酸占总酸比重
-plt.figure(figsize=(10, 4))
 plt.suptitle('固定酸占总酸比分布情况', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -53,7 +52,6 @@ plt.show()
 
 
 # 固定酸占比对评分影响
-plt.figure(figsize=(10, 4))
 plt.suptitle('固定酸占总酸比对评分的影响', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -72,7 +70,6 @@ plt.ylabel('固定酸占比', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 柠檬酸占固定酸比重
-plt.figure(figsize=(10, 4))
 plt.suptitle('柠檬酸占固定酸比分布情况', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -91,7 +88,6 @@ plt.ylabel('频数', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 柠檬酸占比对评分影响
-plt.figure(figsize=(10, 4))
 plt.suptitle('柠檬酸占固定酸比对评分的影响', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -110,7 +106,6 @@ plt.ylabel('柠檬酸占比', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 挥发酸占总酸比重
-plt.figure(figsize=(10, 4))
 plt.suptitle('挥发酸占总酸比分布情况', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -129,7 +124,6 @@ plt.ylabel('频数', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 挥发酸占比对评分影响
-plt.figure(figsize=(10, 4))
 plt.suptitle('挥发酸占总酸比对评分的影响', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -148,7 +142,6 @@ plt.ylabel('挥发酸占比', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 总酸对评分影响
-plt.figure(figsize=(10, 4))
 plt.suptitle('总酸含量对评分的影响', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)
@@ -181,7 +174,6 @@ plt.ylabel('pH值', fontsize=12, fontproperties=my_font)
 plt.show()
 
 # 按柠檬酸分类
-plt.figure(figsize=(10, 4))
 plt.suptitle('按柠檬酸含量分类', y=1.00, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
 plt.subplot(1, 2, 1)

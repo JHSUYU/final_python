@@ -32,26 +32,22 @@ r = dfw.columns.tolist()
 r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
-#红葡密度与酒精
-plt.figure(figsize = (6,4))
-sns.regplot(x='density', y = 'alcohol', data = dfr, scatter_kws = {'s':10}, color = color[0])
-plt.title('红葡萄酒密度与酒精的相关关系')
+# 红葡密度与酒精
+sns.regplot(x='density', y='alcohol', data=dfr, scatter_kws={'s': 10}, color=color[0])
+plt.title('红葡萄酒密度与酒精的相关关系', fontproperties=my_font)
 plt.show()
 
-#白葡密度与酒精
-plt.figure(figsize = (6,4))
-sns.regplot(x='density', y = 'alcohol', data = dfw, scatter_kws = {'s':10}, color = color[0])
-plt.title('白葡萄酒密度与酒精的相关关系')
+# 白葡密度与酒精
+sns.regplot(x='density', y='alcohol', data=dfw, scatter_kws={'s': 10}, color=color[0])
+plt.title('白葡萄酒密度与酒精的相关关系', fontproperties=my_font)
 plt.show()
 
-#红葡糖与酒精
-plt.figure(figsize = (6,4))
-sns.regplot(x='residual sugar', y = 'alcohol', data = dfr, scatter_kws = {'s':10}, color = color[0])
-plt.title('红酒残留糖与酒精的相关关系')
+# 红葡糖与酒精
+sns.regplot(x='residual sugar', y='alcohol', data=dfr, scatter_kws={'s': 10}, color=color[0])
+plt.title('红酒残留糖与酒精的相关关系', fontproperties=my_font)
 plt.show()
 
-#白葡糖与酒精
-plt.figure(figsize = (6,4))
-sns.regplot(x='residual sugar', y = 'alcohol', data = dfw, scatter_kws = {'s':10}, color = color[0])
-plt.title('白葡萄酒残留糖与酒精的相关关系')
+# 白葡糖与酒精
+sns.regplot(x='residual sugar', y='alcohol', data=dfw, scatter_kws={'s': 10}, color=color[0])
+plt.title('白葡萄酒残留糖与酒精的相关关系', fontproperties=my_font)
 plt.show()

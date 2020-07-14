@@ -32,46 +32,46 @@ r = dfw.columns.tolist()
 r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
-#红葡各变量与评分关系
+# 红葡各变量与评分关系
 colnm = dfr.columns.tolist()[:12]
-plt.figure(figsize = (10, 8))
+plt.figure(figsize=(10, 8))
 for i in range(12):
-    plt.subplot(4,3,i+1)
-    sns.boxplot(x ='quality', y = colnm[i], data = dfr, color = color[1], width = 0.6)
-    plt.ylabel(colnm[i],fontsize = 12)
-plt.suptitle('红葡萄酒各变量与评分关系--箱线图', y=1.0, fontsize=14)
+    plt.subplot(4, 3, i + 1)
+    sns.boxplot(x='quality', y=colnm[i], data=dfr, color=color[1], width=0.6)
+    plt.ylabel(colnm[i], fontsize=12)
+plt.suptitle('红葡萄酒各变量与评分关系--箱线图', y=1.0, fontsize=14, fontproperties=my_font)
 plt.tight_layout()
 plt.show()
 
-#白葡各变量与评分关系
+# 白葡各变量与评分关系
 colnm = dfw.columns.tolist()[:12]
-plt.figure(figsize = (10, 8))
+plt.figure(figsize=(10, 8))
 for i in range(12):
-    plt.subplot(4,3,i+1)
-    sns.boxplot(x ='quality', y = colnm[i], data = dfw, color = color[1], width = 0.6)
-    plt.ylabel(colnm[i],fontsize = 12)
-plt.suptitle('白葡萄酒各变量与评分关系--箱线图', y=1.0, fontsize=14)
+    plt.subplot(4, 3, i + 1)
+    sns.boxplot(x='quality', y=colnm[i], data=dfw, color=color[1], width=0.6)
+    plt.ylabel(colnm[i], fontsize=12)
+plt.suptitle('白葡萄酒各变量与评分关系--箱线图', y=1.0, fontsize=14, fontproperties=my_font)
 plt.tight_layout()
 plt.show()
 
-#红葡热力相关图
-plt.figure(figsize = (10,8))
+# 红葡热力相关图
+plt.figure(figsize=(10, 8))
 colnm = dfr.columns.tolist()
 mcorr = dfr[colnm].corr()
 mask = np.zeros_like(mcorr, dtype=np.bool)
 mask[np.triu_indices_from(mask)] = True
 cmap = sns.diverging_palette(220, 10, as_cmap=True)
 sns.heatmap(mcorr, mask=mask, cmap=cmap, square=True, annot=True, fmt='0.2f')
-plt.title('红葡萄酒各变量间热力相关图')
+plt.title('红葡萄酒各变量间热力相关图', fontproperties=my_font)
 plt.show()
 
-#白葡热力相关图
-plt.figure(figsize = (10,8))
+# 白葡热力相关图
+plt.figure(figsize=(10, 8))
 colnm = dfw.columns.tolist()
 mcorr = dfw[colnm].corr()
 mask = np.zeros_like(mcorr, dtype=np.bool)
 mask[np.triu_indices_from(mask)] = True
 cmap = sns.diverging_palette(220, 10, as_cmap=True)
 sns.heatmap(mcorr, mask=mask, cmap=cmap, square=True, annot=True, fmt='0.2f')
-plt.title('白葡萄酒各变量间热力相关图')
+plt.title('白葡萄酒各变量间热力相关图', fontproperties=my_font)
 plt.show()

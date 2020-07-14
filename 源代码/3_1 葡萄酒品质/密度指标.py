@@ -32,17 +32,16 @@ r = dfw.columns.tolist()
 r.insert(0, r.pop())
 dfw = dfw.reindex(columns=r)
 
-#密度对评分影响
-plt.figure(figsize = (10,4))
-plt.suptitle('密度对评分影响', y=1.0, fontsize = 16) #总标题
+# 密度对评分影响
+plt.suptitle('密度对评分影响', y=1.0, fontsize=16, fontproperties=my_font)  # 总标题
 """红"""
-plt.subplot(1,2,1)
+plt.subplot(1, 2, 1)
 sns.boxplot(x=dfr['quality'], y=dfr['density'])
-plt.xlabel('红葡萄酒评分',fontsize = 12)
-plt.ylabel('密度',fontsize = 12)
+plt.xlabel('红葡萄酒评分', fontsize=12, fontproperties=my_font)
+plt.ylabel('密度', fontsize=12, fontproperties=my_font)
 """白"""
-plt.subplot(1,2,2)
+plt.subplot(1, 2, 2)
 sns.boxplot(x=dfw['quality'], y=dfw['density'])
-plt.xlabel('白葡萄酒评分',fontsize = 12)
-plt.ylabel('密度',fontsize = 12)
+plt.xlabel('白葡萄酒评分', fontsize=12, fontproperties=my_font)
+plt.ylabel('密度', fontsize=12, fontproperties=my_font)
 plt.show()
