@@ -71,7 +71,7 @@ plt.show()
 colnm_r = dfr.columns.tolist()
 colnm_w = dfw.columns.tolist()
 plt.figure(figsize=(10, 6))
-plt.suptitle('单变量直方图对比', fontsize=14, y=1.05, fontproperties=my_font)  # 总标题
+plt.suptitle('单变量直方图对比', fontsize=14, y=1, fontproperties=my_font)  # 总标题
 """画前三行的图"""
 for i in range(9):
     y1 = dfr[colnm_r[i]].tolist()
