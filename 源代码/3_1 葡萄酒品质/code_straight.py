@@ -33,45 +33,45 @@ dfw = dfw.reindex(columns=r)
 # print(dfr.head())
 
 colnm = dfr.columns.tolist()
-plt.figure(figsize = (16, 20))
-plt.suptitle("红葡萄酒单变量直方图\nY轴：频数", y=1.0, fontsize = 16) #总标题
+plt.figure(figsize=(16, 20))
+plt.suptitle("红葡萄酒单变量直方图\nY轴：频数", y=1.0, fontsize=16, fontproperties=my_font)  # 总标题
 # 画前三行的图
 for i in range(9):
-    plt.subplot(4,3,i+1)
-    dfr[colnm[i]].hist(bins = 100, color = color[3])
-    plt.xlabel(colnm[i],fontsize = 14)
+    plt.subplot(4, 3, i + 1)
+    dfr[colnm[i]].hist(bins=100, color=color[3])
+    plt.xlabel(colnm[i], fontsize=14)
 plt.tight_layout()
 # 画第四行的图
 for i in range(4):
-    plt.subplot(4,4,i+13)
-    dfr[colnm[i+9]].hist(bins = 100, color = color[3])
-    plt.xlabel(colnm[i+9],fontsize = 14)
+    plt.subplot(4, 4, i + 13)
+    dfr[colnm[i + 9]].hist(bins=100, color=color[3])
+    plt.xlabel(colnm[i + 9], fontsize=14)
 plt.tight_layout()
 plt.show()
 
-#白葡单变量直方图
+# 白葡单变量直方图
 colnm = dfw.columns.tolist()
-plt.figure(figsize = (16, 20))
-plt.suptitle('白葡萄酒单变量直方图\nY轴：频数', y=1, fontsize = 16) #总标题
+plt.figure(figsize=(16, 20))
+plt.suptitle('白葡萄酒单变量直方图\nY轴：频数', y=1, fontsize=16, fontproperties=my_font)  # 总标题
 """画前三行的图"""
 for i in range(9):
-    plt.subplot(4,3,i+1)
-    dfw[colnm[i]].hist(bins = 100, color = color[4])
-    plt.xlabel(colnm[i],fontsize = 14)
+    plt.subplot(4, 3, i + 1)
+    dfw[colnm[i]].hist(bins=100, color=color[4])
+    plt.xlabel(colnm[i], fontsize=14)
 plt.tight_layout()
 """画第四行的图"""
 for i in range(4):
-    plt.subplot(4,4,i+13)
-    dfw[colnm[i+9]].hist(bins = 100, color = color[4])
-    plt.xlabel(colnm[i+9],fontsize = 14)
+    plt.subplot(4, 4, i + 13)
+    dfw[colnm[i + 9]].hist(bins=100, color=color[4])
+    plt.xlabel(colnm[i + 9], fontsize=14)
 plt.tight_layout()
 plt.show()
 
-#红白变量箱线图
+# 红白变量箱线图
 colnm_r = dfr.columns.tolist()
 colnm_w = dfw.columns.tolist()
-plt.figure(figsize = (10, 6))
-plt.suptitle('单变量直方图对比',fontsize=14, y=1.05) #总标题
+plt.figure(figsize=(10, 6))
+plt.suptitle('单变量直方图对比', fontsize=14, y=1.05, fontproperties=my_font)  # 总标题
 """画前三行的图"""
 for i in range(9):
     y1 = dfr[colnm_r[i]].tolist()
@@ -79,21 +79,21 @@ for i in range(9):
     data = []
     data.append(y1)
     data.append(y2)
-    plt.subplot(4,3,i+1)
+    plt.subplot(4, 3, i + 1)
     plt.hist(data, bins=100, histtype='bar')
-    plt.legend(['红','白'],prop={'size': 8})
-    plt.xlabel(colnm_r[i],fontsize = 12)
+    plt.legend(['红', '白'], prop=my_font)
+    plt.xlabel(colnm_r[i], fontsize=12)
 plt.tight_layout()
 """画第四行的图"""
 for i in range(4):
-    y1 = dfr[colnm_r[i+9]].tolist()
-    y2 = dfw[colnm_w[i+9]].tolist()
+    y1 = dfr[colnm_r[i + 9]].tolist()
+    y2 = dfw[colnm_w[i + 9]].tolist()
     data = []
     data.append(y1)
     data.append(y2)
-    plt.subplot(4,4,i+13)
+    plt.subplot(4, 4, i + 13)
     plt.hist(data, bins=100, histtype='bar')
-    plt.legend(['红','白'],prop={'size': 8})
-    plt.xlabel(colnm_r[i+9],fontsize = 14)
+    plt.legend(['红', '白'], prop=my_font)
+    plt.xlabel(colnm_r[i + 9], fontsize=14)
 plt.tight_layout()
-
+plt.show()
