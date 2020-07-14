@@ -38,7 +38,7 @@ sns.regplot(x='density', y = 'alcohol', data = dfr, scatter_kws = {'s':10}, colo
 plt.title('红葡萄酒密度与酒精的相关关系')
 plt.show()
 
-#红葡密度与酒精
+#白葡密度与酒精
 plt.figure(figsize = (6,4))
 sns.regplot(x='density', y = 'alcohol', data = dfw, scatter_kws = {'s':10}, color = color[0])
 plt.title('白葡萄酒密度与酒精的相关关系')
